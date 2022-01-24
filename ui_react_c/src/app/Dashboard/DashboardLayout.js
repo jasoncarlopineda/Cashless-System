@@ -34,12 +34,28 @@ export const DashboardLayout = () => {
         </Menu.Menu>
       </Menu>
 
+      <div
+        style={{
+          marginLeft: "16rem",
+          paddingRight: "1em",
+        }}
+      >
+        <Switch>
+          <Route path="/dashboard" component={DashboardContent} />
+          <Route path="/users" component={UserContent} />
+          <Route path="/shop" component={StoreHome} />
+          <Route path="/">
+            <Redirect to="/dashboard" />
+          </Route>
+        </Switch>
+      </div>
+
       <Menu
         inverted
         vertical
         style={{
           height: "100vh",
-          position: "absolute",
+          position: "fixed",
           margin: "0",
           top: "0",
           backgroundColor: "#0d47a1",
@@ -78,17 +94,6 @@ export const DashboardLayout = () => {
           </>
         )}
       </Menu>
-
-      <div style={{ marginLeft: "16rem", paddingRight: "1em" }}>
-        <Switch>
-          <Route path="/dashboard" component={DashboardContent} />
-          <Route path="/users" component={UserContent} />
-          <Route path="/shop" component={StoreHome} />
-          <Route path="/">
-            <Redirect to="/dashboard" />
-          </Route>
-        </Switch>
-      </div>
     </Fragment>
   );
 };

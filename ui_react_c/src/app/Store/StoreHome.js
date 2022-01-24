@@ -116,7 +116,7 @@ export const StoreHome = () => {
   };
 
   return (
-    <Grid>
+    <Grid >
       <Grid.Row>
         <Grid.Column width={16}>
           <Breadcrumb size="large">
