@@ -34,7 +34,7 @@ class RfidController extends Controller
             return response(['message' => 'The given data was invalid.', 'errors' => ['rfid' => ['RFID does not exist']]], 422);
         }
         if ((float) $rfid->balance < (float) $fields['total']) {
-            return response(['message' => 'The given data was invalid.', 'errors' => ['rfid' => ['RFID does not exist']]], 422);
+            return response(['message' => 'The given data was invalid.', 'errors' => ['rfid' => ['Insufficient funds']]], 422);
         }
 
         $rfid->balance = (float) $rfid->balance - (float) $fields['total'];
