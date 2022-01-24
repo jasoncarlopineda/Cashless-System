@@ -1,0 +1,17 @@
+.link-active {
+  font-weight: bold;
+  color: white !important;
+}
+
+.link-active .icon,
+.link-active span {
+  color: white !important;
+}
+
+.link-active > div {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+body {
+  background-color: #e3f2fd !important;
+}
