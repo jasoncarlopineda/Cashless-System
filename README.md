@@ -11,7 +11,7 @@ create database cashless
 composer install
 php artisan migrate
 php artisan serve --port=5000
-http://localhost:5000/api/reseed
+http://localhost:5000/api/reseed (on your browser or postman)
 Seeded / Initial Admin User:
 Admin: admin@localhost.com
 Password: admin
